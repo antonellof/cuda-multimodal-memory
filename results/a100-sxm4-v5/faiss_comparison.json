@@ -1,0 +1,1 @@
+ERROR: faiss-gpu not installed. Run: pip install faiss-gpu numpy

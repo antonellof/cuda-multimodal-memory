@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "date": "2026-04-09",
+    "gpu": "NVIDIA A100 SXM4 80GB",
+    "cuda": "12.8",
+    "notes": "All results from same machine, same session"
+  },
+
+  "faiss_comparison": {
+    "description": "Same-hardware FAISS vs MARS comparison (D=768, K=10, single-query p99)",
+    "faiss_flat": {
+      "N_1000":   {"p99_ms": 0.120, "recall": 1.00},
+      "N_2000":   {"p99_ms": 0.157, "recall": 1.00},
+      "N_5000":   {"p99_ms": 0.223, "recall": 1.00},
+      "N_10000":  {"p99_ms": 0.207, "recall": 1.00},
+      "N_20000":  {"p99_ms": 0.239, "recall": 1.00},
+      "N_50000":  {"p99_ms": 0.442, "recall": 1.00},
+      "N_100000": {"p99_ms": 0.720, "recall": 1.00},
+      "N_200000": {"p99_ms": 1.338, "recall": 1.00},
+      "N_500000": {"p99_ms": 3.251, "recall": 1.00},
+      "N_1000000":{"p99_ms": 6.423, "recall": 1.00}
+    },
+    "faiss_ivf": {
+      "N_1000":   {"p99_ms": 0.159, "recall": 0.41},
+      "N_2000":   {"p99_ms": 0.338, "recall": 0.44},
+      "N_5000":   {"p99_ms": 0.255, "recall": 0.41},
+      "N_10000":  {"p99_ms": 0.322, "recall": 0.42},
+      "N_20000":  {"p99_ms": 0.245, "recall": 0.43},
+      "N_50000":  {"p99_ms": 0.344, "recall": 0.43},
+      "N_100000": {"p99_ms": 0.384, "recall": 0.37},
+      "N_200000": {"p99_ms": 0.458, "recall": 0.30},
+      "N_500000": {"p99_ms": 0.572, "recall": 0.21},
+      "N_1000000":{"p99_ms": 0.679, "recall": 0.15}
+    },
+    "cuvs_cagra": {
+      "N_1000":   {"p99_ms": 3.300, "recall": 0.995},
+      "N_5000":   {"p99_ms": 6.003, "recall": 0.793},
+      "N_10000":  {"p99_ms": 3.575, "recall": 0.589},
+      "N_50000":  {"p99_ms": 5.540, "recall": 0.206},
+      "N_100000": {"p99_ms": 2.832, "recall": 0.104}
+    },
+    "mars_v6": {
+      "N_2400":  {"p99_ms": 0.26},
+      "N_10000": {"p99_ms": 0.34},
+      "N_20000": {"p99_ms": 0.36},
+      "N_50000": {"p99_ms": 0.44}
+    }
+  },
+
+  "temporal_relevance": {
+    "description": "AV perception scenario: 200 objects, 600 frames at 60Hz, 9K total detections",
+    "faiss_flat": {
+      "temporal_precision_at_10": 0.218,
+      "stale_result_rate": 0.493,
+      "object_recall": 1.000,
+      "p99_ms": 0.903
+    },
+    "faiss_post_rerank": {
+      "temporal_precision_at_10": 0.910,
+      "stale_result_rate": 0.000,
+      "object_recall": 0.940,
+      "p99_ms": 0.323
+    }
+  },
+
+  "streaming_insertion": {
+    "description": "60Hz sensor, 10 dets/frame, 10 seconds, FAISS rebuild every 1s",
+    "faiss_streaming": {
+      "freshness_rate": 0.068,
+      "miss_recent_rate": 0.932,
+      "rebuild_avg_ms": 9.0,
+      "rebuild_count": 9,
+      "query_p99_ms": 0.398
+    }
+  },
+
+  "ablation_n5000": {
+    "full":       {"p99_ms": 0.794, "recall": 0.84, "crossmodal": 0.90},
+    "no_bridges": {"p99_ms": 0.820, "recall": 0.835, "crossmodal": 0.90},
+    "no_hubs":    {"p99_ms": 0.729, "recall": 0.835, "crossmodal": 0.90},
+    "flat":       {"p99_ms": 0.766, "recall": 0.835, "crossmodal": 0.90},
+    "h0":         {"p99_ms": 0.661, "recall": 0.835, "crossmodal": 0.90},
+    "h1":         {"p99_ms": 0.649, "recall": 0.835, "crossmodal": 0.90},
+    "h3":         {"p99_ms": 1.174, "recall": 0.845, "crossmodal": 0.90}
+  },
+
+  "ablation_n50000": {
+    "full":       {"p99_ms": 1.421, "recall": 0.765, "crossmodal": 0.80},
+    "no_bridges": {"p99_ms": 1.298, "recall": 0.765, "crossmodal": 0.80},
+    "no_hubs":    {"p99_ms": 1.421, "recall": 0.765, "crossmodal": 0.80},
+    "flat":       {"p99_ms": 1.291, "recall": 0.765, "crossmodal": 0.80},
+    "h0":         {"p99_ms": 1.223, "recall": 0.765, "crossmodal": 0.80},
+    "h1":         {"p99_ms": 1.237, "recall": 0.765, "crossmodal": 0.80},
+    "h3":         {"p99_ms": 1.487, "recall": 0.765, "crossmodal": 0.80}
+  }
+}

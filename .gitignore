@@ -1,0 +1,64 @@
+# ─── C++ / CUDA build artifacts ───
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.ptx
+*.cubin
+*.fatbin
+*.gpu
+memory_engine
+validate
+engine_server
+build/
+bin/
+dist/
+
+# ─── LaTeX intermediates (paper/) ───
+# Keep main.tex, references.bib, figures/, and main.pdf; drop everything else.
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ─── Editor / IDE ───
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-*
+
+# ─── Generated benchmark outputs ───
+# The canonical projection data is committed as benchmark.json at the repo
+# root. Runtime outputs from `make check` and the benchmark adapters should
+# NOT be committed — they are user-specific.
+results.json
+results_*.json
+benchmarks/*/results_*.json
+benchmarks/*/data/
+
+# ─── LibreOffice lock files (in case docs are edited locally) ───
+.~lock.*#
+
+# ─── Temporary files ───
+*.tmp

@@ -1,0 +1,22 @@
+{
+  "demo": "robot_episodic",
+  "scenario": "1 kHz whole-body control loop, 10-second episodic window",
+  "frame_rate_hz": 1000,
+  "deadline_p99_ms": 1.000,
+  "num_frames": 10000,
+  "corpus_size": 10000,
+  "embedding_dim": 768,
+  "latency_ms": {
+    "p50":  0.2964,
+    "p90":  0.3016,
+    "p99":  0.3156,
+    "max":  3.1908,
+    "mean": 0.2983
+  },
+  "metrics": {
+    "relevant_hit_rate": 0.0000,
+    "total_queries": 10000.0000,
+    "avg_queries_per_tick": 1.0000
+  },
+  "deadline_met": true
+}

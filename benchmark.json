@@ -1,0 +1,117 @@
+[
+  {
+    "N": 1000,
+    "n_text": 500,
+    "n_audio": 250,
+    "n_image": 250,
+    "edges": 5625,
+    "avg_deg": 11.25,
+    "cpu": {
+      "similarity": 0.018,
+      "rerank": 0.007,
+      "topk": 0.015,
+      "bfs": 0.423,
+      "total": 0.463
+    },
+    "gpu_est": {
+      "similarity": 0.0004,
+      "rerank": 0.0002,
+      "topk": 0.0008,
+      "bfs": 0.0423,
+      "total": 0.0437
+    },
+    "bfs_waves": 2
+  },
+  {
+    "N": 2000,
+    "n_text": 1000,
+    "n_audio": 500,
+    "n_image": 500,
+    "edges": 11217,
+    "avg_deg": 11.22,
+    "cpu": {
+      "similarity": 0.034,
+      "rerank": 0.008,
+      "topk": 0.019,
+      "bfs": 0.49,
+      "total": 0.551
+    },
+    "gpu_est": {
+      "similarity": 0.0007,
+      "rerank": 0.0003,
+      "topk": 0.001,
+      "bfs": 0.049,
+      "total": 0.0509
+    },
+    "bfs_waves": 2
+  },
+  {
+    "N": 4000,
+    "n_text": 2000,
+    "n_audio": 1000,
+    "n_image": 1000,
+    "edges": 22311,
+    "avg_deg": 11.16,
+    "cpu": {
+      "similarity": 0.076,
+      "rerank": 0.014,
+      "topk": 0.034,
+      "bfs": 0.529,
+      "total": 0.653
+    },
+    "gpu_est": {
+      "similarity": 0.0015,
+      "rerank": 0.0005,
+      "topk": 0.0017,
+      "bfs": 0.0529,
+      "total": 0.0566
+    },
+    "bfs_waves": 2
+  },
+  {
+    "N": 8000,
+    "n_text": 4000,
+    "n_audio": 2000,
+    "n_image": 2000,
+    "edges": 44536,
+    "avg_deg": 11.13,
+    "cpu": {
+      "similarity": 0.324,
+      "rerank": 0.027,
+      "topk": 0.068,
+      "bfs": 0.563,
+      "total": 0.982
+    },
+    "gpu_est": {
+      "similarity": 0.0065,
+      "rerank": 0.0009,
+      "topk": 0.0034,
+      "bfs": 0.0563,
+      "total": 0.0671
+    },
+    "bfs_waves": 2
+  },
+  {
+    "N": 16000,
+    "n_text": 8000,
+    "n_audio": 4000,
+    "n_image": 4000,
+    "edges": 88754,
+    "avg_deg": 11.09,
+    "cpu": {
+      "similarity": 0.924,
+      "rerank": 0.061,
+      "topk": 0.134,
+      "bfs": 0.603,
+      "total": 1.722
+    },
+    "gpu_est": {
+      "similarity": 0.0185,
+      "rerank": 0.002,
+      "topk": 0.0067,
+      "bfs": 0.0603,
+      "total": 0.0875
+    },
+    "bfs_waves": 2
+  }
+]

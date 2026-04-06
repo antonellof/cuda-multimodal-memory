@@ -1,0 +1,37 @@
+{
+  "tool": "cuda-multimodal-memory-latency-bench",
+  "version": "0.1.0",
+  "config": {
+    "rate_hz": 60.0,
+    "budget_ms": 1.0000,
+    "frames": 300,
+    "corpus_size": 10000,
+    "embedding_dim": 768,
+    "top_k": 10,
+    "keepalive": false,
+    "fp16": false,
+    "cuda_graph": false,
+    "cmng": true
+  },
+  "wall_latency_ms": {
+    "p50":    3.5270,
+    "p90":    3.7296,
+    "p99":    3.9458,
+    "p99_9":  4.0807,
+    "p99_99": 4.0807,
+    "max":    5.0805,
+    "mean":   3.5420,
+    "stddev": 0.1691
+  },
+  "gpu_kernel_ms": {
+    "p50": 3.4785,
+    "p99": 3.8226,
+    "max": 4.0376
+  },
+  "deadline": {
+    "budget_ms":       1.0000,
+    "deadline_misses": 300,
+    "miss_rate":       1.000000,
+    "p99_within_budget": false
+  }
+}

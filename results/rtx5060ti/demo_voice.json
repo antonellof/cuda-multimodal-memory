@@ -1,0 +1,21 @@
+{
+  "demo": "voice_agent",
+  "scenario": "30 Hz audio + dialogue text, cross-modal retrieval on end-of-turn",
+  "frame_rate_hz": 30,
+  "deadline_p99_ms": 20.000,
+  "num_frames": 900,
+  "corpus_size": 9000,
+  "embedding_dim": 768,
+  "latency_ms": {
+    "p50":  1.0312,
+    "p90":  1.0385,
+    "p99":  1.0542,
+    "max":  1.7672,
+    "mean": 1.0339
+  },
+  "metrics": {
+    "cross_modal_hit_rate": 0.0000,
+    "total_queries": 900.0000
+  },
+  "deadline_met": true
+}

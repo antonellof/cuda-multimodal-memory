@@ -1,0 +1,21 @@
+{
+  "demo": "ar_spatial",
+  "scenario": "90 Hz AR headset, 5-minute session, gaze-directed landmark pre-fetch",
+  "frame_rate_hz": 90,
+  "deadline_p99_ms": 5.000,
+  "num_frames": 4500,
+  "corpus_size": 27000,
+  "embedding_dim": 768,
+  "latency_ms": {
+    "p50":  1.3847,
+    "p90":  1.3896,
+    "p99":  1.4043,
+    "max":  5.0755,
+    "mean": 1.3869
+  },
+  "metrics": {
+    "cache_hit_rate": 0.0000,
+    "total_queries": 4500.0000
+  },
+  "deadline_met": true
+}
