@@ -7,7 +7,7 @@ importance scoring for real-time embodied AI.
 [![C++](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-7%2F7%20passing-brightgreen)](tests/test_memory_graph.cpp)
-[![Paper](https://img.shields.io/badge/paper-PDF-red?logo=adobeacrobatreader&logoColor=white)](paper/main.pdf)
+[![Paper](https://img.shields.io/badge/paper-PDF-red?logo=adobeacrobatreader&logoColor=white)](https://www.fratepietro.com/papers/MARS/main.pdf)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19493869-blue)](https://doi.org/10.5281/zenodo.19493869)
 
 ---
